@@ -15,15 +15,8 @@ export const metadata: Metadata = {
   title: "Strakk: Join the waitlist",
   description:
     "Log your lifts, track every PR, and climb the leaderboard with your crew. Stop training alone. Join the Strakk waitlist.",
-  // Favicon: served from /public. See /public/favicon.ico, icon-512.png, etc.
-  icons: {
-    icon: [
-      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-  },
+  // Favicons are handled by the App Router file convention: app/icon.png and
+  // app/apple-icon.png (Next emits the proper, cache-busted <link> tags).
   openGraph: {
     type: "website",
     url: SITE_URL,
