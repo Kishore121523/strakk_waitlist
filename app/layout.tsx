@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import PageLoader from "@/components/PageLoader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -53,7 +54,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="bg-bg font-sans text-ink antialiased">{children}</body>
+      <body className="bg-bg font-sans text-ink antialiased">
+        <PageLoader />
+        {children}
+      </body>
     </html>
   );
 }
